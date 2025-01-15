@@ -174,6 +174,7 @@ class _PositionedListState extends State<PositionedList> {
           reverse: widget.reverse,
           cacheExtent: widget.cacheExtent,
           physics: widget.physics,
+          primary: true,
           shrinkWrap: widget.shrinkWrap,
           semanticChildCount: widget.semanticChildCount ?? widget.itemCount,
           slivers: <Widget>[
@@ -216,6 +217,7 @@ class _PositionedListState extends State<PositionedList> {
               SliverPadding(
                 padding: _trailingSliverPadding,
                 sliver: SliverList(
+
                   delegate: SliverChildBuilderDelegate(
                     (context, index) => widget.separatorBuilder == null
                         ? _buildItem(index + widget.positionedIndex + 1)
